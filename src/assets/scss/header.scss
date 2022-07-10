@@ -1,0 +1,18 @@
+@use './_mixins.scss' as mixins;
+
+.header {
+    &__wrapper {
+        @include mixins.container;
+        @extend .justify-content-between, .py-2;
+    }
+    &__logo {
+        max-width: fit-content;
+        flex: 1 1 33%;
+    }
+    &__navigation {
+        display: flex;
+        flex: 1 1 auto;
+        max-width: fit-content;
+    }
+}
+

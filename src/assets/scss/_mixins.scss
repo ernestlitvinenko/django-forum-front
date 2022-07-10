@@ -1,0 +1,5 @@
+@use './_variables' as variables;
+
+@mixin container {
+  @extend .container, .row, .mx-auto;
+}
