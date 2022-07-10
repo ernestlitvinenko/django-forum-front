@@ -1,9 +1,10 @@
 import React from 'react'
-import Header from '../components/header'
-
-const HomePage: () => React.ReactNode = () => (
+import Categories from "../components/categories";
+const HomePage = () => (
     <>
-        <Header />
+        <main>
+            <Categories />
+        </main>
     </>
 )
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import Home from './Home'
+import Thread from './Thread'
+import {Route, Routes} from "react-router-dom";
 
 
-interface Route {
-    route: string,
-    element: () => React.ReactNode
-}
+const Pages = () => (
+    <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/thread/:thread_id" element={<Thread />}/>,
+    </Routes>
+)
 
-const pages : Array<Route> = [
-    {route: '/', element: Home}
-];
-
-export default pages
+export default Pages

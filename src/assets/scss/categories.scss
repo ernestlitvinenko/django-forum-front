@@ -1,0 +1,10 @@
+@use './_mixins.scss' as mixins;
+
+.categories {
+    @extend .container;
+}
+.article{
+    &__btn {
+        @extend .btn, .btn-outline-primary;
+    }
+}

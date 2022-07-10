@@ -1,14 +1,15 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
 import Pages from './pages';
-// import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Header from "./components/header";
 function App() {
 
   return (
-  <Routes>
-    {Pages.map(elem => <Route path={elem.route} element={elem.element()} />)}
-  </Routes>
+      <div className="app-wrapper">
+        <Header />
+          <Pages />
+      </div>
+
 
 );
 }
