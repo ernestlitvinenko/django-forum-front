@@ -4,15 +4,31 @@
     &__wrapper {
         @include mixins.container;
         @extend .justify-content-between, .py-2;
+        margin-bottom: 2rem;
     }
     &__logo {
         max-width: fit-content;
         flex: 1 1 33%;
+        text-decoration:None;
+        color: inherit;
+        font-size: 1.5rem;
+        &:hover {
+            color: inherit;
+        }
     }
     &__navigation {
         display: flex;
         flex: 1 1 auto;
         max-width: fit-content;
+        align-items: center;
+        flex-wrap: wrap;
+        * {
+            margin-right: 1rem;
+        }
+    }
+    &__logo-title {
+        text-decoration: none;
+        margin-left: 1rem;
     }
 }
 

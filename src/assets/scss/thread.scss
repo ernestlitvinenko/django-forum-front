@@ -1,0 +1,39 @@
+@use './_mixins.scss' as mixins;
+
+.thread {
+    @include mixins.container;
+    &__title {
+        @extend .my-2;
+
+
+    }
+    &__author {
+        margin-bottom: 2rem;
+        @extend .pb-3;
+        border-bottom: 1px solid rgba(#000, .3);
+    }
+
+    &__message {
+        border: 1px solid rgba(#000, .3);
+        padding: 1rem;
+       h4 {
+        @extend .my-2;
+       }
+    }
+    &__message-input {
+        @extend .form-control;
+        height: 100%;
+        & + button {
+            @extend .btn, .btn-outline-primary;
+        }
+    }
+    &__input-form {
+        background: #fefefe;
+        padding: 1rem;
+        display: flex;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}

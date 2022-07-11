@@ -1,10 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import home from '../../assets/img/Home.svg'
 const logo: React.FC = () => (
-    <div className={'header__logo'}>
+    <Link to="/" className={'header__logo'}>
         <img src={home} alt="Logo"/>
-        Django Forum
-    </div>
+        <span className="header__logo-title">Django Forum</span>
+    </Link>
 )
 
 export default logo;

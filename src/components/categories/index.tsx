@@ -4,19 +4,13 @@ import Category from "./category";
 // import {TopicsList} from "../../requests/interfaces";
 import API from "../../requests"
 import {TopicsList} from "../../requests/interfaces";
+import { useTopicList } from "../../hooks/useTopicList";
 
 // const list_topics = API.getTopicsList().map(elem => <Category title={elem.topicName} key={elem.topicName}/>)
 
 const Categories: React.FunctionComponent = () => {
-    const [list_topics, set_list_topics] = useState<TopicsList[]>([])
 
-    useEffect(() => {
-        API.getTopicsList().then(
-            r => {
-                set_list_topics(r)
-            }
-        )
-    }, []);
+    const list_topics = useTopicList()
 
     return (<section className="categories">
             <h2 className="categories__title">Категории</h2>

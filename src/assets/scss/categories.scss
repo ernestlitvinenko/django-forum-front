@@ -2,8 +2,24 @@
 
 .categories {
     @extend .container;
+    &__wrapper {
+        @extend .row;
+        article {
+            flex: 1 1 30%;
+            margin: 1rem;
+            @extend .col-12, .col-sm-6;
+            border: 1px solid black;
+            padding: 1rem;
+
+        }
+    }
 }
 .article{
+    display: flex;
+    flex-direction: column;
+    * {
+    @extend .mb-3;
+    }
     &__btn {
         @extend .btn, .btn-outline-primary;
     }
